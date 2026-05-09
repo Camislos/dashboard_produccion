@@ -81,7 +81,7 @@ with colA:
         text_auto='.2s'
     )
     fig1.update_layout(height=350, showlegend=False, xaxis_title="Eficiencia (%)", yaxis_title="")
-    st.plotly_chart(fig1, use_container_width=True)
+    st.plotly_chart(fig1, width='stretch')
 
 with colB:
     st.markdown("#### Defectos por Turno")
@@ -94,7 +94,7 @@ with colB:
         points='all'
     )
     fig2.update_layout(height=350, showlegend=False, xaxis_title="Turno", yaxis_title="Tasa Defectos (%)")
-    st.plotly_chart(fig2, use_container_width=True)
+    st.plotly_chart(fig2, width='stretch')
 
 st.markdown("---")
 
@@ -114,7 +114,7 @@ with colC:
         text_auto='.2s'
     )
     fig3.update_layout(height=350, showlegend=False, xaxis_title="Tiempo Paro (min)", yaxis_title="")
-    st.plotly_chart(fig3, use_container_width=True)
+    st.plotly_chart(fig3, width='stretch')
 
 with colD:
     st.markdown("#### Temperatura vs Defectos")
@@ -126,7 +126,7 @@ with colD:
         trendline='ols'
     )
     fig4.update_layout(height=350, xaxis_title="Temperatura (°C)", yaxis_title="Tasa Defectos (%)")
-    st.plotly_chart(fig4, use_container_width=True)
+    st.plotly_chart(fig4, width='stretch')
 
 st.markdown("---")
 
@@ -142,4 +142,4 @@ fig5 = px.line(
 )
 fig5.update_traces(line_color='#2563eb', line_width=3, marker=dict(size=8, color='#1e40af'))
 fig5.update_layout(height=350, xaxis_title="Semana", yaxis_title="Unidades Producidas", xaxis=dict(dtick=4))
-st.plotly_chart(fig5, use_container_width=True)
+st.plotly_chart(fig5, width='stretch')
